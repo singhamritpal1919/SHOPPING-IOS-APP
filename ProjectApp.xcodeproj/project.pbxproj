@@ -28,6 +28,7 @@
 		18A854892C37076500E5D2A2 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A854882C37076500E5D2A2 /* CartView.swift */; };
 		18A8548B2C370E3500E5D2A2 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8548A2C370E3500E5D2A2 /* CartManager.swift */; };
 		18A8548D2C371CDF00E5D2A2 /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8548C2C371CDF00E5D2A2 /* ProductRow.swift */; };
+		18ABDAF62C6AECEE00562772 /* Womens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ABDAF52C6AECEE00562772 /* Womens.swift */; };
 		18B1E29D2C3EF44F0033768F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1E29C2C3EF44F0033768F /* MainView.swift */; };
 		18C6F7722C376D1400BE663D /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C6F7712C376D1400BE663D /* PaymentButton.swift */; };
 		18C6F7AD2C3DD63600BE663D /* Sweater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C6F7AC2C3DD63600BE663D /* Sweater.swift */; };
@@ -65,6 +66,7 @@
 		18A854882C37076500E5D2A2 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		18A8548A2C370E3500E5D2A2 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		18A8548C2C371CDF00E5D2A2 /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
+		18ABDAF52C6AECEE00562772 /* Womens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Womens.swift; sourceTree = "<group>"; };
 		18B1E29C2C3EF44F0033768F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		18C6F7712C376D1400BE663D /* PaymentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentButton.swift; sourceTree = "<group>"; };
 		18C6F7AC2C3DD63600BE663D /* Sweater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sweater.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				18C6F7B22C3E03E600BE663D /* Mens.swift */,
 				18C6F7AC2C3DD63600BE663D /* Sweater.swift */,
 				18B1E29C2C3EF44F0033768F /* MainView.swift */,
+				18ABDAF52C6AECEE00562772 /* Womens.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				18C95E442C658E5F00531C04 /* SignUpView.swift in Sources */,
 				18A8548D2C371CDF00E5D2A2 /* ProductRow.swift in Sources */,
 				185C717D2C364CD10029E80E /* Product.swift in Sources */,
+				18ABDAF62C6AECEE00562772 /* Womens.swift in Sources */,
 				18C6F7AD2C3DD63600BE663D /* Sweater.swift in Sources */,
 				1846DE8E2C47198700775B58 /* CCView.swift in Sources */,
 				185C71802C364F0A0029E80E /* ProductCard.swift in Sources */,

@@ -326,6 +326,9 @@ struct PaymentView: View {
     
     var body: some View {
         VStack {
+            NavigationLink(destination: TransactionHistoryView()) {
+                Text("View Transaction History")
+            }
             Text("Payment Details")
                 .font(.largeTitle)
                 .padding()

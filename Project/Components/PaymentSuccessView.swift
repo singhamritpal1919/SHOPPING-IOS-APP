@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseFirestore
 
 struct PaymentSuccessView: View {
     var lastFourDigits: String
@@ -33,6 +35,28 @@ struct PaymentSuccessView: View {
             Spacer()
         }
         .navigationTitle("Success")
+        .onAppear {
+                    saveTransaction(lastFourDigits: lastFourDigits, totalAmount: totalAmount)
+                }
+    }
+    
+    
+    func saveTransaction(lastFourDigits: String, totalAmount: String) {
+        let db = Firestore.firestore()
+        
+        let transactionData: [String: Any] = [
+            "timestamp": Timestamp(),
+            "lastFourDigits": lastFourDigits,
+            "totalAmount": totalAmount
+        ]
+        
+        db.collection("transactions").addDocument(data: transactionData) { error in
+            if let error = error {
+                print("Error saving transaction: \(error.localizedDescription)")
+            } else {
+                print("Transaction saved successfully!")
+            }
+        }
     }
 }
 

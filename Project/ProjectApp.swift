@@ -6,12 +6,23 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct ProjectApp: App {
+    
+//    @StateObject private var transactionManager = TransactionManager()
+    
+    init() {
+        FirebaseApp.configure()
+        print("Configured Firebase!")
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            RootView()
+            LoginView()
+//                .environmentObject(transactionManager)
         }
     }
 }

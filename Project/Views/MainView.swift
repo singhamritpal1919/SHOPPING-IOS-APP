@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct MainView: View {
+    @StateObject var cartManager = CartManager()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            Mens()
+                .environmentObject(cartManager)
+                .tabItem {
+                    Label("Mens", systemImage: "person.fill")
+                }
+            
+            Sweater()
+                .environmentObject(cartManager)
+                .tabItem {
+                    Label("Sweater", systemImage: "tshirt.fill")
+                }
+        }
     }
 }
 
-#Preview {
-    MainView()
+struct MainView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
+    }
 }

@@ -37,17 +37,7 @@ struct CartView: View {
                     }
                     .padding()
                     
-                    //                PaymentButton(action: {})
-                    //                    .padding()
-                    
-                    
-                    
-                    //                    PaymentButton(action: {
-                    //                        NavigationLink(<#LocalizedStringKey#>, destination: PaymentView()
-                    //                            .environmentObject(cartManager))
-                    //                    })
-                    //                    .padding()
-                    
+         
                     NavigationLink(destination: PaymentView()
                         .environmentObject(cartManager)) {
                             Text("Proceed to Payment")
@@ -78,9 +68,10 @@ struct CartView: View {
                         .foregroundColor(.red)
                 }
             }
+            
             .fullScreenCover(isPresented: $showSignInView) {
-                SignInView(showAuthenticationView: .constant(true))
-            }
+                            LoginView()
+                        }
         }
     }
     func signOut() {

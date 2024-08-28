@@ -26,7 +26,7 @@ struct LoginView: View {
                     .frame(width: 200, height: 200)
                     .padding(10)
                 
-                Text("What are your Login Details")
+                Text("SIGN IN ")
                     .font(.subheadline)
                     .foregroundColor(.black)
                     .bold()
@@ -62,12 +62,12 @@ struct LoginView: View {
                 Spacer()
                 HStack {
                     Text("Forgot Password?")
-                        .foregroundColor(.gray)
+                        .foregroundColor(.black)
                     
                     NavigationLink(destination: ForgotPasswordView()) {
                         Text("Reset it here")
-                            .foregroundColor(.blue)
-                            .underline(true, color: .blue)
+                            .foregroundColor(.black)
+                            
                     }
                 }
                 Button(action: {
@@ -85,12 +85,12 @@ struct LoginView: View {
                 
                 HStack {
                     Text("Don't have a profile?")
-                        .foregroundColor(.gray)
+                        .foregroundColor(.black)
                     
                     NavigationLink(destination: SignUpView()) {
                         Text("Create new one")
-                            .foregroundColor(.blue)
-                            .underline(true, color: .blue)
+                            .foregroundColor(.black)
+                            
                     }
                 }
                 .padding(.bottom, 200)

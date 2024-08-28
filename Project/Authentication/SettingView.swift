@@ -44,16 +44,7 @@ struct SettingView: View {
                 }
             }
             
-//            Button("Reset Password") {
-//                Task {
-//                    do {
-//                        try await viewModel.resetPassword()
-//                        print("Password Reset")
-//                    } catch {
-//                        print(error)
-//                    }
-//                }
-//            }
+
             
         }
         .navigationTitle("Settings")

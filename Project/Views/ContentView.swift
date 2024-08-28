@@ -8,30 +8,34 @@
 
 
 
+
+
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var cartManager = CartManager()  // Shared CartManager instance
+
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: Mens()) {
+                NavigationLink(destination: Mens().environmentObject(cartManager)) {
                     CategoryButton(title: "Men", imageName: "men")
                 }
                 .background(.black)
                 .cornerRadius(50)
-                
-                NavigationLink(destination: Womens()) {
+
+                NavigationLink(destination: Womens().environmentObject(cartManager)) {
                     CategoryButton(title: "Women", imageName: "women")
                 }
                 .background(.black)
                 .cornerRadius(50)
-                
-                NavigationLink(destination: Kids()) {
+
+                NavigationLink(destination: Kids().environmentObject(cartManager)) {
                     CategoryButton(title: "Kids", imageName: "kid1")
                 }
                 .background(.black)
                 .cornerRadius(50)
-                
+
                 Spacer()
             }
             .navigationTitle("Clothing App")
@@ -40,6 +44,41 @@ struct ContentView: View {
     }
 }
 
+
+//import SwiftUI
+//
+//struct ContentView: View {
+//    @StateObject var cartManager = CartManager()  // Shared CartManager instance
+//    
+//    var body: some View {
+//        NavigationView {
+//            VStack {
+//                NavigationLink(destination: Mens().environmentObject(cartManager)) {
+//                    CategoryButton(title: "Men", imageName: "men")
+//                }
+//                .background(.black)
+//                .cornerRadius(50)
+//                
+//                NavigationLink(destination: Womens().environmentObject(cartManager)) {
+//                    CategoryButton(title: "Women", imageName: "women")
+//                }
+//                .background(.black)
+//                .cornerRadius(50)
+//                
+//                NavigationLink(destination: Kids().environmentObject(cartManager)) {
+//                    CategoryButton(title: "Kids", imageName: "kid1")
+//                }
+//                .background(.black)
+//                .cornerRadius(50)
+//                
+//                Spacer()
+//            }
+//            .navigationTitle("Clothing App")
+//            .padding()
+//        }
+//    }
+//}
+//
 struct CategoryButton: View {
     let title: String
     let imageName: String

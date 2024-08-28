@@ -21,11 +21,7 @@ struct SignUpView: View {
     var body: some View {
         NavigationView {
             VStack {
-//                Image("logo")
-//                    .resizable()
-//                    .scaledToFit()
-//                    .frame(width: 200, height: 200)
-//                    .padding(10)
+               
                 
                 Text("Create Your Account")
                     .font(.subheadline)
@@ -88,12 +84,12 @@ struct SignUpView: View {
                 
                 HStack {
                     Text("Already have an account?")
-                        .foregroundColor(.gray)
+                        .foregroundColor(.black)
                     
                     NavigationLink(destination: LoginView()) {
                         Text("Sign in here")
-                            .foregroundColor(.blue)
-                            .underline(true, color: .blue)
+                            .foregroundColor(.black)
+                            
                     }
                 }
                 .padding(.bottom, 200)
@@ -147,7 +143,7 @@ struct SignUpView: View {
                 self.showAlert(message: error.localizedDescription)
             } else if let authResult = authResult {
                 let userID = authResult.user.uid
-                // Save user's date of birth or other details here if needed
+                
                 print("User ID: \(userID), Age: \(age)")
                 SessionManager.shared.loginUser(userid: userID) { success in
                     if success {
